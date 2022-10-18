@@ -4,7 +4,6 @@
 entries:
   - title: info
     entries:
-      - title: ZB 000
       - title: github
         url: https://github.com/zib0
       - title: linkedin
@@ -20,7 +19,7 @@ entries:
   - title: posts by category
     entries:
       - title: programming
-        url: /category/programming/
+        url: /category/programming
         post_list:
           category: programming
           show_more: true
