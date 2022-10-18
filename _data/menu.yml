@@ -21,7 +21,7 @@ entries:
   - title: posts by category
     entries:
       - title: programming
-        url: /category/programming/
+        url: /category/programming
         post_list:
           category: programming
           show_more: true
