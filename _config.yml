@@ -34,3 +34,16 @@ kramdown:
 exclude:
   - "amplify.yml"
   - "docker_ecr.sh"
+
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/

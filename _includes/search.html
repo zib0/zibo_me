@@ -1,0 +1,33 @@
+<span class="input-label search-bar-input">search posts via ddg</span>
+<form name="search" action="//duckduckgo.com/" class="search-bar">
+  <input type="search" class="form-control" placeholder="" name="q" />
+  <input type="hidden" value="zibo.me" name="sites" />
+  <button class="btn btn-default" type="submit">search</button>
+</form>
+<script>
+  let searchBarStatus = sessionStorage.getItem("searchBarStatus");
+
+  if (!searchBarStatus) {
+    sessionStorage.setItem("searchBarStatus", "False");
+  } else if (searchBarStatus === "True") {
+    document
+      .getElementById("search-bar")
+      .setAttribute("style", "display: block");
+  }
+
+  function toggleSearchBar() {
+    let searchBarStatus = sessionStorage.getItem("searchBarStatus");
+
+    if (searchBarStatus === "False") {
+      document
+        .getElementById("search-bar")
+        .setAttribute("style", "display: block");
+      sessionStorage.setItem("searchBarStatus", "True");
+    } else if (searchBarStatus === "True") {
+      document
+        .getElementById("search-bar")
+        .setAttribute("style", "display: none");
+      sessionStorage.setItem("searchBarStatus", "False");
+    }
+  }
+</script>
