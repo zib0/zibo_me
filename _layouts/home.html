@@ -3,7 +3,10 @@ layout: default
 ---
 
 <header>
-  <h1>{{ site.title }}</h1>
+  <h1>
+    <img style="display: inline; width: 0.75em" src="/logo.png" alt="logo" />{{
+    site.title }}
+  </h1>
   {%-if site.theme_config.show_description-%}
   <p>{{ site.description }}</p>
   {%-endif-%}

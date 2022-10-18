@@ -18,19 +18,14 @@ entries:
       show_more_url: archive.html
 
   - title: posts by category
-    post_list:
-      category: example2
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+    entries:
+      - title: programming
+        url: /category/programming/
+        post_list:
+          category: programming
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: programming-archive.html
 
   - title: rss
     url: feed.xml
-  
-  - title: another list
-    entries:
-      - title: with subitems
-        entries:
-          - title: with subsubitems
-          - title: example page
-            url: about
