@@ -11,6 +11,11 @@ layout: default
   <p>{{ site.description }}</p>
   {%-endif-%}
 </header>
+<a
+  id="theme-toggle"
+  onclick="modeSwitcher()"
+  style="display: flex; justify-content: flex-end"
+></a>
 {%-include menu_item.html collection=site.data.menu.entries-%} {{ content }}
 <ul>
   <li style="cursor: pointer" onclick="toggleSearchBar()" title="search">

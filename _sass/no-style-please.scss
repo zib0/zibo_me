@@ -1,19 +1,59 @@
 // -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
+$theme-map: null;
+$themes: (
+  light: (
+    text: #333333,
+    bg: #ffffff,
+    brand: #567567,
+  ),
+  dark: (
+    text: #ffffff,
+    bg: #333333,
+    brand: #abcabc,
+  ),
+);
 
-    &.ioda { filter: invert(0); }
+@mixin themify($themes) {
+
+  @each $name,
+  $values in $themes {
+    .#{$name}-theme {
+      $theme-map: $values !global;
+      @content;
+    }
   }
 }
 
-body[a="dark"] { @include dark-appearance; }
-
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+@include themify($themes) {
+  // p {
+  //   color: themed('text');
+  //   background-color: themed('bg');
+  // };
+  w {
+    color: themed('text');
+    background-color: themed('bg');
+  };
+  html, body {
+    color: themed('text');
+    background: themed('bg');
+  }
+  back {
+    color: themed('text');
+  }
+};
 
 @media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
+  body[a="auto"] {
+    .dark-theme & {
+      color: themed('text');
+      background: themed('bg');
+    }
+  }
 }
+
 // -------------------------------------------- //
 
 // bg color is also needed in html in order to
@@ -62,14 +102,9 @@ hr {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid black;
+  border: thin solid;
   border-collapse: collapse;
   padding: 0.4rem;
-}
-
-code {
-  // color: white;
-  // background: black;
 }
 
 div.highlighter-rouge code {
