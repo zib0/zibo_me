@@ -52,4 +52,12 @@
       document.getElementById("theme-toggle").innerHTML = "Light Mode";
     }
   }
+
+  if (sessionStorage.getItem("theme") === "dark") {
+    document.getElementById("theme-toggle").innerHTML = "Light Mode";
+    document.documentElement.setAttribute("class", "dark-theme");
+  } else {
+    document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+    document.documentElement.setAttribute("class", "light-theme");
+  }
 </script>
