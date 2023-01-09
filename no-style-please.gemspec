@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zibo.w"]
 
   spec.summary       = "A (nearly) no-CSS, fast, minimalist Jekyll theme."
-  spec.homepage      = "https://github.com/zib0/no-style-please"
+  spec.homepage      = "https://github.com/zibo-wang/no-style-please"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }

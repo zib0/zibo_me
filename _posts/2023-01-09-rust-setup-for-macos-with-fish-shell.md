@@ -9,7 +9,7 @@ I have been using [fish shell](https://fishshell.com) for long. Even though zsh,
 
 # Install Rustup
 
-Rustup is the official toolchain installer for Rust. Even though I have Homebrew on the system, I still prefer to use rustup, it offers a better way to manage Rust toolchain. Somehow like `nvm` for Node.js, or `conda` for Python.
+[Rustup](https://rustup.rs) is the official toolchain installer for Rust. Even though I have Homebrew on the system, I still prefer to use rustup, it offers a better way to manage Rust toolchain. Somehow like `nvm` for Node.js, or `conda` for Python.
 
 You can install rustup by running the following command:
 
@@ -52,6 +52,7 @@ To configure your current shell, run:
 source "$HOME/.cargo/env"
 
 ```
+
 But you shouldn't do that for fish shell. Instead, follow the next section.
 
 # Configure Fish Shell
@@ -63,6 +64,5 @@ What we really need to do is to add the following line to `~/.config/fish/config
 set -gx PATH $HOME/.cargo/bin $PATH
 
 ```
+
 You don't need to source the env file, since it is not designed for fish shell, and our PATH is already set. Just restart the terminal, and you are good to go.
-
-
